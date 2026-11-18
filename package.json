@@ -1,0 +1,9 @@
+{
+  "name": "cat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A cat lives in this phone. It runs around all day. Tap it to pat it.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

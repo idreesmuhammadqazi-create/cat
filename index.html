@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#151110" />
+<meta name="description" content="A cat lives in this phone. It runs around all day. Tap it to pat it." />
+<title>cat</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%B1%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="scene">
+  <div class="phone">
+    <div class="phone__screen" id="screen">
+      <div class="window" aria-hidden="true">
+        <span class="window__sun"></span>
+        <span class="window__cloud"></span>
+      </div>
+      <div class="picture" aria-hidden="true">
+        <svg viewBox="0 0 40 34">
+          <path d="M6 17c0-6 6-10 15-10s15 4 15 10-6 10-15 10S6 23 6 17Z" fill="#e7a06a" />
+          <path d="M36 17 40 9v16z" fill="#d98a58" />
+          <circle cx="13" cy="14" r="2" fill="#5a3a25" />
+          <path d="M18 17q3 3 6 0" fill="none" stroke="#5a3a25" stroke-width="1.4" stroke-linecap="round" />
+        </svg>
+      </div>
+      <div class="plant" aria-hidden="true">
+        <i class="leaf leaf--1"></i>
+        <i class="leaf leaf--2"></i>
+        <i class="leaf leaf--3"></i>
+        <i class="pot"></i>
+      </div>
+      <div class="shelf" aria-hidden="true">
+        <i class="book book--1"></i>
+        <i class="book book--2"></i>
+        <i class="book book--3"></i>
+        <i class="shelf__plant"></i>
+      </div>
+      <div class="clock" id="clockface" aria-hidden="true">
+        <i class="clock__hand clock__hand--hour"></i>
+        <i class="clock__hand clock__hand--minute"></i>
+        <i class="clock__pin"></i>
+      </div>
+      <div class="floor" aria-hidden="true"></div>
+      <div class="rug" aria-hidden="true"></div>
+      <div class="box" aria-hidden="true"></div>
+      <div class="yarn" aria-hidden="true"></div>
+
+      <div class="island" aria-hidden="true"></div>
+      <div class="status">
+        <span class="status__time" id="clock">--:--</span>
+        <span class="status__pats" id="pats">0 pats</span>
+      </div>
+
+      <div class="cat" id="cat" role="button" tabindex="0" aria-label="pat the cat">
+        <div class="cat__inner">
+          <svg class="cat__svg" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <ellipse class="cat__shadow" cx="50" cy="76" rx="26" ry="4" />
+
+            <g class="cat__tail">
+              <path d="M28 55C18 57 10 51 11 41c.6-6.5 4.2-10.6 8-13.5" />
+              <circle class="cat__tail-tip" cx="19.4" cy="27" r="3.4" />
+            </g>
+
+            <g class="cat__leg cat__leg--1"><rect x="28" y="54" width="8" height="20" rx="4" /></g>
+            <g class="cat__leg cat__leg--2"><rect x="38" y="54" width="8" height="20" rx="4" /></g>
+
+            <ellipse class="cat__body" cx="48" cy="52" rx="25" ry="14" />
+            <path class="cat__stripe" d="M36 40.5c1.8 2.6 1.8 5 1.2 7.5" />
+            <path class="cat__stripe" d="M45 38.5c1.8 2.8 1.8 5.4 1.2 8" />
+            <path class="cat__stripe" d="M54 38.5c1.8 2.8 1.8 5.4 1.2 8" />
+
+            <g class="cat__leg cat__leg--3"><rect x="55" y="54" width="8" height="20" rx="4" /></g>
+            <g class="cat__leg cat__leg--4"><rect x="65" y="54" width="8" height="20" rx="4" /></g>
+
+            <g class="cat__head">
+              <path class="cat__ear" d="M63 28 66 12 78 24Z" />
+              <path class="cat__ear-inner" d="M66.5 25 68 17 74.5 24Z" />
+              <path class="cat__ear" d="M79 23 89 12 90.5 28Z" />
+              <path class="cat__ear-inner" d="M81.5 24 85 17 88.5 24.5Z" />
+              <ellipse class="cat__face" cx="76" cy="37" rx="17" ry="15.5" />
+              <ellipse class="cat__muzzle" cx="77" cy="44" rx="9.5" ry="6.5" />
+
+              <g class="cat__eyes">
+                <ellipse class="cat__eye" cx="70" cy="35" rx="2.6" ry="3.4" />
+                <ellipse class="cat__eye" cx="83" cy="35" rx="2.6" ry="3.4" />
+                <circle class="cat__glint" cx="70.9" cy="33.8" r="0.9" />
+                <circle class="cat__glint" cx="83.9" cy="33.8" r="0.9" />
+              </g>
+              <g class="cat__happy-eyes">
+                <path d="M67 36c1.6-2.6 4.4-2.6 6 0" />
+                <path d="M80 36c1.6-2.6 4.4-2.6 6 0" />
+              </g>
+
+              <path class="cat__nose" d="M74.4 41h5.2L77 44.2Z" />
+              <path class="cat__mouth" d="M77 44.2v1.6M77 45.8c-1.2 1.7-3.4 1.5-4.4-.2M77 45.8c1.2 1.7 3.4 1.5 4.4-.2" />
+              <path class="cat__whisker" d="M85.5 41.5 96 39M85.5 44.5 96.5 46M68.5 41.5 58 39M68.5 44.5 57.5 46" />
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="fx" id="fx" aria-hidden="true"></div>
+    </div>
+    <div class="phone__glow" aria-hidden="true"></div>
+  </div>
+
+  <p class="hint" id="hint">tap the cat to pat it</p>
+</main>
+<script src="cat.js"></script>
+</body>
+</html>
