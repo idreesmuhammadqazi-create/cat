@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <rect width="1024" height="1024" fill="#f3ddc0" />
+  <g transform="translate(512 512) scale(0.78) translate(-512 -512)">
+    <g transform="translate(512 512) scale(1.16) translate(-512 -512)">
+      <path d="M270 455 300 240 455 350Z" fill="#e9964f" />
+      <path d="M754 455 724 240 569 350Z" fill="#e9964f" />
+      <path d="M330 420 343 300 418 362Z" fill="#f0b0a0" />
+      <path d="M694 420 681 300 606 362Z" fill="#f0b0a0" />
+      <ellipse cx="512" cy="535" rx="250" ry="225" fill="#e9964f" />
+      <ellipse cx="512" cy="620" rx="145" ry="100" fill="#fff1dd" />
+      <path d="M512 330v60M455 342l13 56M569 342l-13 56" fill="none" stroke="#c87330" stroke-width="17" stroke-linecap="round" opacity="0.9" />
+      <ellipse cx="415" cy="505" rx="31" ry="38" fill="#3a2517" />
+      <ellipse cx="609" cy="505" rx="31" ry="38" fill="#3a2517" />
+      <circle cx="427" cy="491" r="10" fill="#ffffff" />
+      <circle cx="621" cy="491" r="10" fill="#ffffff" />
+      <path d="M478 585h68l-34 38Z" fill="#cf7163" />
+      <path d="M512 623v20M512 643c-16 23-45 20-57 2M512 643c16 23 45 20 57 2" fill="none" stroke="#3a2517" stroke-width="10" stroke-linecap="round" opacity="0.75" />
+      <path d="M735 550 850 532M735 604 854 620M289 550 174 532M289 604 170 620" fill="none" stroke="#8a6a4e" stroke-width="10" stroke-linecap="round" opacity="0.5" />
+      <ellipse cx="352" cy="590" rx="38" ry="20" fill="#f0b0a0" opacity="0.5" />
+      <ellipse cx="672" cy="590" rx="38" ry="20" fill="#f0b0a0" opacity="0.5" />
+    </g>
+  </g>
+</svg>

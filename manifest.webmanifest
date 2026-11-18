@@ -1,0 +1,20 @@
+{
+  "id": "./",
+  "name": "marmalade — a phone pet",
+  "short_name": "marmalade",
+  "description": "A tiny cat who lives on your phone. Feed her, play with her, let her nap, and tap to pat.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#f6e8d5",
+  "theme_color": "#f6e8d5",
+  "categories": ["games", "lifestyle"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
