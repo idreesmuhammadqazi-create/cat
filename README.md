@@ -1,6 +1,21 @@
 # marmalade — a phone pet
 
 A tiny cat who lives on your phone. Feed her, play with her, let her nap, tap to pat.
+
+There are two builds:
+
+- **Android APK — the floating pet.** `android/marmalade.apk` (source in `android/`).
+  She runs over whatever app you're using, in a foreground-service overlay: tap to pat,
+  drag to move, stop her from the notification. This is the one for "always on top of
+  other apps". See [`android/README.md`](android/README.md).
+- **Installable web app (PWA).** The files in the repo root. Installs to the home screen,
+  runs offline, has the full room/needs/feed/play/nap game — but browsers can't draw over
+  other apps. See below.
+
+---
+
+# the web version
+
 She runs around her room all day, loafs on the rug when she's tired, does zoomies when
 she's happy, and sleeps when it's night where you are.
 

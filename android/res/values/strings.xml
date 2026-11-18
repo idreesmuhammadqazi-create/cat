@@ -1,0 +1,8 @@
+<resources>
+  <string name="app_name">marmalade</string>
+  <string name="channel_name">floating cat</string>
+  <string name="channel_desc">keeps marmalade running over your apps</string>
+  <string name="notif_title">marmalade is out</string>
+  <string name="notif_text">Tap her to pat. She runs over whatever you open.</string>
+  <string name="stop">Stop</string>
+</resources>
