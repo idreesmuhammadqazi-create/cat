@@ -8,11 +8,13 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: collect
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p out
           for p in 1 2 3; do
-            curl -sS -H "Accept: application/vnd.github+json" "https://api.github.com/repos/FileSherlock/k15/events?per_page=100&page=$p" -o out/repo-p$p.json || true
-            curl -sS -H "Accept: application/vnd.github+json" "https://api.github.com/users/FileSherlock/events/public?per_page=100&page=$p" -o out/user-p$p.json || true
+            curl -sS -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GH_TOKEN" "https://api.github.com/repos/FileSherlock/k15/events?per_page=100&page=$p" -o out/repo-p$p.json || true
+            curl -sS -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GH_TOKEN" "https://api.github.com/users/FileSherlock/events/public?per_page=100&page=$p" -o out/user-p$p.json || true
           done
           wc -c out/*.json
       - uses: actions/upload-artifact@v4
