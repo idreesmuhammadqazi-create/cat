@@ -14,21 +14,8 @@ jobs:
           curl -sS -H "Accept: application/vnd.github+json" "https://api.github.com/users/FileSherlock/events/public?per_page=100" -o out/user-events.json || true
           curl -sS -H "Accept: application/vnd.github+json" "https://api.github.com/repos/FileSherlock/k15/issues/1/timeline?per_page=100" -o out/timeline.json || true
           curl -sS -H "Accept: application/vnd.github+json" "https://api.github.com/repos/FileSherlock/k15/branches?per_page=100" -o out/branches.json || true
-          for f in out/*.json; do echo "$f $(wc -c < $f)"; done
-          python3 - <<'PY'
-import json,glob
-for f in glob.glob('out/*.json'):
-    try: j=json.load(open(f))
-    except Exception as e: print(f,'parse',e); continue
-    if isinstance(j,list):
-        print('==',f,len(j))
-        for e in j[:100]:
-            t=e.get('type'); p=e.get('payload') or {}
-            if t in ('PushEvent','CreateEvent','DeleteEvent','PullRequestEvent'):
-                print(t,e.get('created_at'),p.get('ref'),p.get('ref_type'),p.get('before'),p.get('head'),p.get('ref_type'), [c.get('sha') for c in (p.get('commits') or [])][:5])
-    else:
-        print('==',f, list(j)[:10])
-PY
+          curl -sS -H "Accept: application/vnd.github+json" "https://api.github.com/repos/FileSherlock/k15/commits?per_page=100" -o out/commits.json || true
+          wc -c out/*.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
