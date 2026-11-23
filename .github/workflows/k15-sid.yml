@@ -9,13 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: probe
-        run: |
-          python3 tools/sid_probe.py > out.json
-          python3 - <<'PY'
-import json
-j=json.load(open('out.json'))
-print('runs',len(j),'hits',[x for x in j if x.get('hits')][:3],'errors',sum(1 for x in j if 'error' in x))
-PY
+        run: python3 tools/sid_probe.py > out.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
